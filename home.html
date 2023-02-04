@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <!-- linking css -->
+    <link rel="stylesheet" href="css/home.css">
+    <!-- website title -->
+    <title>Readers Shelves</title>
+    <style>
+      /* Chosing every body section by * */
+       *{
+           margin: 0px;
+           padding: 0px;
+           box-sizing: border-box;
+           
+        }
+        #slider{
+             width: 380px;
+             height: 600px;
+             margin: 10px auto;
+             box-sizing: border-box;
+             overflow: hidden;
+             box-shadow: 10px 10px 40px rgb(114, 39, 184);
+
+		}
+		#img{
+           width: 100%;
+           height: 100%;
+		}
+        }
+    </style>
+</head>
+<body>
+  <!-- Navigation bar creating on list tag -->
+    <nav>
+      <div class="logo">
+           <h4><a href="home.html"><span style="color:rgb(114, 39, 184);">Reader's</span> <span style="color:rgb(37, 165, 137);">Shelves</span></a></h4>
+      </div>
+    
+      <ul class="navlink">
+          <li>
+            <a href="home.html"><span style="color: rgb(114, 39, 184);">Home</span></a> 
+          </li>
+          <li>
+            <a href="pages/product.html"><span>Product</span></a>
+          </li>
+          <li>
+            <a href="pages/blog.html"><span>Blog</span></a>
+          </li>
+          <li>
+            <a href="pages/research.html"><span>Research</span></a>
+          </li>
+          <li>
+            <a href="pages/contact.html"><span>Contact Us</span></a>
+          </li>
+      </ul>
+    </nav>
+    <div class="middle">
+      
+    <div class="box1"> 
+      <h3>Welcome Readers,</h3><br>
+      <p>You have now reached this place where every books are found according to your choice. Come explore the world of <span style="color:rgb(114, 39, 184);">Reader's</span><span style="color:rgb(37, 165, 137);"> Shelves</span>!
+      <br>Where you find every shelves full of books you love to read.</p> 
+      <br>
+      <button class="button" ><a href="pages/product.html"> Explore our shelves!</a></button><br><br><br>
+      <p>“A reader lives a thousand lives before he dies, said Jojen. The man who never reads lives only one.”<br>
+        – George R.R. Martin, A Dance with Dragons</p><br><br><br>
+      <p>“Reading changes your life. Reading unlocks worlds unknown or forgotten, taking travelers around the world and through time.
+      <br>Reading helps you escape the confines of school and pursue your own education.”<br> – Donalyn Miller</p>
+    </div>
+
+    <div class="box2" id="slider">
+      <div id="img">
+        <img src='images/1.jpeg'>
+      </div>
+    </div>
+    
+   </div>
+
+   <div class="secondmiddle"> 
+        <h3>Spring Discount Deals</h3>  
+   </div>
+   
+   <h2 class="topheading">&nbsp;&nbsp;Investor's Collection</h2>
+
+   <div class="investor" >
+         <div class="investorimage">
+        <img src="images/investor related.jpg">
+        </div>
+        <div class="priceinvestor">
+          <h2>Price:</h2>&nbsp;&nbsp;&nbsp;<s>$700</s>&nbsp;&nbsp;&nbsp;$550&nbsp;&nbsp;
+          <button class="buy"><a href="pages/product.html">Buy</a></button>
+          Includes :<br>
+          1. The Intelligent Investor<br>
+          2. Think and Grow Rich<br>
+          3. Bad Blood<br>
+          4. One Up On Wall Street<br>
+          5. The Psychology of Money<br>
+          6. Common Stocks and Uncommon Profits<br>
+          </div>
+    
+             
+  </div>
+  
+  <h2 class="topheading"><br>&nbsp;&nbsp;Biography Collection</h2>
+
+  <div class="biography">
+      <div class="biographyimage">
+        <img src="images/biography.jpg">
+      </div>
+      <div class="pricebiography">
+        <h2>Price:</h2>&nbsp;&nbsp;&nbsp;<s>$1200</s>&nbsp;&nbsp;&nbsp;$1000&nbsp;&nbsp;
+        <button class="buy"><a href="pages/product.html">Buy</a></button>
+        Includes :<br>
+        1. I am Malala<br>
+        2. Nepoleon<br>
+        3. Alexander Hamilton<br>
+        4. Gandhi An Autobiography<br>
+        5. Long Walk To Freedom<br>
+        6. Churchil 
+      </div>
+     
+  </div>
+  <!-- footer section created -->
+<footer>
+    <div class="footer">
+        <h3><span style="color: rgb(114, 39, 184);">Reader's</span><span style="color: rgb(37, 165, 137);"> Shelves</span></h3>
+    </div>
+      <ul class="socials">
+       <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+       <li><a href="https://twitter.com/i/flow/login"><i class="fa fa-twitter"></i></a></li>
+       <li><a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a></li>
+       <li><a href="https://www.google.com/"><i class="fa fa-google"></i></a></li>
+      </ul> 
+     <div class="footerbottom">
+           <p>Copyright &copy;2022 Reader's Shelves</p><br>
+            Designed by Sushil Khatri
+     </div>
+     
+
+</footer>
+
+
+
+   <script type="text/javascript">
+    var images= ['images/1.jpeg','images/2.jpeg','images/3.jpeg','images/4.jpeg','images/5.jpeg','images/6.jpeg','images/7.jpeg','images/8.jpeg'];//array created of image files
+    var imgs= document.getElementById('img');//variable created
+    var x= 0;
+    setInterval(slider,2000); 
+
+    function slider(){
+     
+            if(x<images.length){
+               x= x+1;
+
+            }
+            else{
+              x=1;
+            }
+            // To set
+       imgs.innerHTML="<img src="+images[x-1]+">";
+   }
+</script>
+</body>
+</html>
